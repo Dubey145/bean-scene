@@ -1,12 +1,23 @@
 /** @type {import('tailwindcss').Config} */
+import {coffeeHero} from '../assets/images'
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        clicker: ["Clicker Script"],
+        playfair: ["Playfair Display"]
+      },
+      backgroundImage: {
+        customBackground: "url('assets/images/coffee-hero.png')",
+      },
+      colors:{
+        'custom-yellow':'#F9C06A',
+        coffee:'#6F4E37',
+        gray:'#707070',
+        'light-yellow': '#FFF9F1'
+      }
+    },
   },
   plugins: [],
-}
-
+};
